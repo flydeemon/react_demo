@@ -6,7 +6,7 @@ module.exports = {
     context: __dirname + '/src',
     entry: {
       app: './main.js', // 入口文件，单入口 app.jsx 文件
-      vendors: ['antd','react', 'react-dom', 'react-responsive', 'react-router']
+      vendors: ['antd','react', 'react-dom']
     }, 
     output: {
         path: __dirname + '/assets/',

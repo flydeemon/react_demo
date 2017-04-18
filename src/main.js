@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import {Router, Route, hashHistory} from 'react-router';
-import 'antd/dist/antd.css'; 
 import MediaQuery from 'react-responsive';
 
 import PCIndex from './components/pc_index';
