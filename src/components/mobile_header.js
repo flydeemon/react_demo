@@ -65,7 +65,7 @@ class MobileHeader extends React.Component {
 			methon: 'GET'
 		};
 		let formData = this.props.form.getFieldsValue();
-		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=' + this.state.action + '&username=' + formData.userName + '&password=' + formData.password + '&r_userName=' + formData.r_userName + '&r_password=' + formData.r_password + '&r_confirmPassword=' + formData.r_confirmPassword;
+		let url = '//newsapi.gugujiankong.com/Handler.ashx?action=' + this.state.action + '&username=' + formData.userName + '&password=' + formData.password + '&r_userName=' + formData.r_userName + '&r_password=' + formData.r_password + '&r_confirmPassword=' + formData.r_confirmPassword;
 
 		fetch(url, myFetchOptions)
 			.then(response => response.json())

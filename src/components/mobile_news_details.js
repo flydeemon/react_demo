@@ -17,7 +17,7 @@ export default class MobileNewsDetails extends React.Component {
 		let myFetchOptions = {
 			method: 'GET'
 		};
-		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=' + this.props.params.uniquekey;
+		let url = '//newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=' + this.props.params.uniquekey;
 		fetch(url, myFetchOptions)
 			.then(response => response.json())
 			.then(json => {
