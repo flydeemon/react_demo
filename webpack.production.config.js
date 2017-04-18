@@ -30,7 +30,7 @@ module.exports = {
         ]
     },
     plugins: [
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendors.js.js' }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendors.js' }),
     new webpack.optimize.UglifyJsPlugin({
        // 最紧凑的输出
         beautify: false,
