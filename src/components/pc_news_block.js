@@ -15,6 +15,7 @@ export default class PCNewsBlock extends React.Component {
 		let myFetchOptions = {
 			methon: 'GET',
 			header: {
+				mode: 'cors',
 				'Access-Control-Allow-Origin':'*'
 			}
 		};

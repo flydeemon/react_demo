@@ -64,6 +64,7 @@ class PCHeader extends React.Component {
 		let myFetchOptions = {
 			methon: 'GET',
 			header: {
+				mode: 'cors',
 				'Access-Control-Allow-Origin':'*'
 			}
 		};

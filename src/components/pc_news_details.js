@@ -17,6 +17,7 @@ export default class PCNewsDetails extends React.Component {
 		let myFetchOptions = {
 			methon: 'GET',
 			header: {
+				mode: 'cors',
 				'Access-Control-Allow-Origin':'*'
 			}
 		};

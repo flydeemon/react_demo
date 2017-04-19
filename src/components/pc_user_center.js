@@ -36,6 +36,7 @@ export default class PCUserCenter extends React.Component {
 		const myFetchOptions = {
 			methon: 'GET',
 			header: {
+				mode: 'cors',
 				'Access-Control-Allow-Origin':'*'
 			}
 		};
