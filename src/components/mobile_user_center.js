@@ -34,11 +34,14 @@ export default class MobileUserCenter extends React.Component {
 
 	componentDidMount() {
 		const myFetchOptions = {
-			method: 'GET'
+			methon: 'GET',
+			header: {
+				'Access-Control-Allow-Origin':'*'
+			}
 		};
 
-		let collectionUrl = '//newsapi.gugujiankong.com/Handler.ashx?action=getuc&userid=' + localStorage.userId;
-		let commentsUrl = '//newsapi.gugujiankong.com/Handler.ashx?action=getusercomments&userid=' + localStorage.userId;
+		let collectionUrl = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getuc&userid=' + localStorage.userId;
+		let commentsUrl = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getusercomments&userid=' + localStorage.userId;
 
 		fetch(collectionUrl, myFetchOptions)
 			.then(response => response.json())
@@ -71,8 +74,8 @@ export default class MobileUserCenter extends React.Component {
 					uid: -1,
 					name: 'xxx.png',
 					state: 'done',
-					url: '//os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png',
-					thumbUrl: '//os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
+					url: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png',
+					thumbUrl: 'https://os.alipayobjects.com/rmsportal/NDbkJhpzmLxtPhB.png'
 				}
 			],
 			onPreview: (file) => {

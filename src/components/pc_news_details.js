@@ -15,9 +15,12 @@ export default class PCNewsDetails extends React.Component {
 
 	componentDidMount() {
 		let myFetchOptions = {
-			method: 'GET'
+			methon: 'GET',
+			header: {
+				'Access-Control-Allow-Origin':'*'
+			}
 		};
-		let url = '//newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=' + this.props.params.uniquekey;
+		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=' + this.props.params.uniquekey;
 		fetch(url, myFetchOptions)
 			.then(response => response.json())
 			.then(json => {

@@ -13,9 +13,12 @@ export default class PCNewsImagesBlock extends React.Component {
 
 	componentWillMount() {
 		let myFetchOptions = {
-			methon: 'GET'
+			methon: 'GET',
+			header: {
+				'Access-Control-Allow-Origin':'*'
+			}
 		};
-		let url = '//newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=' + this.props.type + '&count=' + this.props.count;
+		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=' + this.props.type + '&count=' + this.props.count;
 		fetch(url, myFetchOptions)
 			.then(response => response.json())
 			.then(json => this.setState({news: json}));

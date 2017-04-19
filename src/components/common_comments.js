@@ -31,9 +31,12 @@ class CommonComments extends React.Component {
 
 	componentDidMount() {
 		let myFetchOptions = {
-			methon: 'GET'
+			methon: 'GET',
+			header: {
+				'Access-Control-Allow-Origin':'*'
+			}
 		};
-		let url = '//newsapi.gugujiankong.com/Handler.ashx?action=getcomments&uniquekey=' + this.props.uniquekey;
+		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getcomments&uniquekey=' + this.props.uniquekey;
 		fetch(url, myFetchOptions)
 			.then(response => response.json())
 			.then(json => this.setState({
@@ -47,7 +50,7 @@ class CommonComments extends React.Component {
 			methon: 'GET'
 		};
 		let formData = this.props.form.getFieldsValue();
-		let url = '//newsapi.gugujiankong.com/Handler.ashx?action=comment&userid=' + localStorage.userId + '&uniquekey=' + this.props.uniquekey + '&commnet=' + formData.remark;
+		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=comment&userid=' + localStorage.userId + '&uniquekey=' + this.props.uniquekey + '&commnet=' + formData.remark;
 		fetch(url, myFetchOptions)
 			.then(response => response.json())
 			.then(json => {
@@ -59,7 +62,7 @@ class CommonComments extends React.Component {
 		let myFetchOptions = {
 			method: 'GET'
 		};
-		let url = '//newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=' + localStorage.userId + '&uniquekey=' + this.props.uniquekey;
+		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=' + localStorage.userId + '&uniquekey=' + this.props.uniquekey;
 		fetch(url, myFetchOptions)
 			.then(response => response.json())
 			.then(json => {
