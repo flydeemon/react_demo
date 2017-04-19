@@ -16,11 +16,11 @@ export default class PCNewsDetails extends React.Component {
 	componentDidMount() {
 		let myFetchOptions = {
 			methon: 'GET',
-			header: {
+			header: new Headers({
 				mode: 'cors',
 				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Access-Control-Allow-Origin':'*'
-			}
+			})
 		};
 		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=' + this.props.params.uniquekey;
 		fetch(url, myFetchOptions)

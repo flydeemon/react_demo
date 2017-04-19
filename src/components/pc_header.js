@@ -63,11 +63,11 @@ class PCHeader extends React.Component {
 		e.preventDefault();
 		let myFetchOptions = {
 			methon: 'GET',
-			header: {
+			header: new Headers({
 				mode: 'cors',
 				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Access-Control-Allow-Origin':'*'
-			}
+			})
 		};
 		let formData = this.props.form.getFieldsValue();
 		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=' + this.state.action + '&username=' + formData.userName + '&password=' + formData.password + '&r_userName=' + formData.r_userName + '&r_password=' + formData.r_password + '&r_confirmPassword=' + formData.r_confirmPassword;

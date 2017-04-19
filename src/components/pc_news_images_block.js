@@ -14,11 +14,11 @@ export default class PCNewsImagesBlock extends React.Component {
 	componentWillMount() {
 		let myFetchOptions = {
 			methon: 'GET',
-			header: {
+			header: new Headers({
 				mode: 'cors',
 				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Access-Control-Allow-Origin':'*'
-			}
+			})
 		};
 		let url = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=' + this.props.type + '&count=' + this.props.count;
 		fetch(url, myFetchOptions)

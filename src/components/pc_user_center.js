@@ -35,11 +35,11 @@ export default class PCUserCenter extends React.Component {
 	componentDidMount() {
 		const myFetchOptions = {
 			methon: 'GET',
-			header: {
+			header: new Headers({
 				mode: 'cors',
 				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Access-Control-Allow-Origin':'*'
-			}
+			})
 		};
 
 		let collectionUrl = 'http://newsapi.gugujiankong.com/Handler.ashx?action=getuc&userid=' + localStorage.userId;

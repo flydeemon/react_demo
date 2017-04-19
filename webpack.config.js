@@ -10,7 +10,7 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: '/assets/'
     }, 
-    devtool: inline-source-map, // 调试 es6 代码 source-map
+    devtool: 'source-map', // 调试 es6 代码 source-map
     module: {
         loaders: [ // 使用特定的加载器 loader 处理特定的文件
             {
