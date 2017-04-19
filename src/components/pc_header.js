@@ -65,6 +65,7 @@ class PCHeader extends React.Component {
 			methon: 'GET',
 			header: {
 				mode: 'cors',
+				'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 				'Access-Control-Allow-Origin':'*'
 			}
 		};
